@@ -35,5 +35,3 @@ def test_small_model_training():
 @pytest.mark.xfail
 def test_test_known_bug():
     assert 1 == 2
-    
-    
