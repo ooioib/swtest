@@ -1,13 +1,12 @@
 # selenium/melon.py
 
-
 # 브라우저를 실행 및 제어하기 위한 클래스
 from selenium import webdriver
 
-# 크롬 브라우저 설정을 위한 도클래스
+# 크롬 브라우저 설정을 위한 클래스
 from selenium.webdriver.chrome.options import Options
 
-# 웹 요소를 찾기 위한 도클래스
+# 웹 요소를 찾기 위한 클래스
 from selenium.webdriver.common.by import By
 
 # 키보드 입력을 제어하기 위한 클래스

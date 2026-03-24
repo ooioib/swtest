@@ -1,6 +1,5 @@
 # selenium/find_elem.py
 
-
 # 브라우저를 실행 및 제어하기 위한 클래스
 from selenium import webdriver
 
