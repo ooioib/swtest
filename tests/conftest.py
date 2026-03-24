@@ -48,5 +48,5 @@ def driver(request):
 
 @pytest.fixture(autouse=True)
 def reset_browser_state(driver):
-    driver.delet_all_cookies()
+    driver.delete_all_cookies()
     driver.get("about:blank")
