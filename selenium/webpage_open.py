@@ -1,10 +1,8 @@
 # selenium/webpage_open.py
 
-# 브라우저를 실행 및 제어하기 위한 클래스
-from selenium import webdriver
+from selenium import webdriver                          # 브라우저를 실행 및 제어하기 위한 클래스
+from selenium.webdriver.chrome.options import Options   # 크롬 브라우저 설정을 위한 클래스
 
-# 크롬 브라우저 설정을 위한 클래스
-from selenium.webdriver.chrome.options import Options
 
 # 크롬 옵션 객체 생성
 opts = Options()

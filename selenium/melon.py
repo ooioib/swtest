@@ -1,22 +1,11 @@
 # selenium/melon.py
 
-# 브라우저를 실행 및 제어하기 위한 클래스
-from selenium import webdriver
-
-# 크롬 브라우저 설정을 위한 클래스
-from selenium.webdriver.chrome.options import Options
-
-# 웹 요소를 찾기 위한 클래스
-from selenium.webdriver.common.by import By
-
-# 키보드 입력을 제어하기 위한 클래스
-from selenium.webdriver.common.keys import Keys
-
-# 명시적 대기를 사용하기 위한 클래스
-from selenium.webdriver.support.ui import WebDriverWait
-
-# 대기 조건을 제공하는 클래스
-from selenium.webdriver.support import expected_conditions as EC    
+from selenium import webdriver # 브라우저를 실행 및 제어하기 위한 클래스
+from selenium.webdriver.chrome.options import Options # 크롬 브라우저 설정을 위한 클래스
+from selenium.webdriver.common.by import By # 웹 요소를 찾기 위한 클래스
+from selenium.webdriver.common.keys import Keys # 키보드 입력을 제어하기 위한 클래스
+from selenium.webdriver.support.ui import WebDriverWait # 명시적 대기를 사용하기 위한 클래스
+from selenium.webdriver.support import expected_conditions as EC # 대기 조건을 제공하는 클래스
 
 
 opts = Options()                                # 크롬 옵션 객체 생성
