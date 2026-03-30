@@ -1,4 +1,5 @@
-# 2.webpage_open.py
+# playwright/2.webpage_open.py
+# browser context 생성하여 페이지 만들기
 
 # playwright 라이브러리에서 sync_playwright 함수를 가져옴
 # sync_playwright : 동기 방식으로 브라우저 자동화를 수행

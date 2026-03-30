@@ -1,4 +1,5 @@
-# playwright/1.webpage_open.py
+# playwright/4.multi_pages.py
+# 여러 페이지 열기(같은 context 안의 여러 page)
 
 # playwright 라이브러리에서 sync_playwright 함수를 가져옴
 # sync_playwright : 동기 방식으로 브라우저 자동화를 수행
@@ -11,18 +12,19 @@ with sync_playwright() as p:
 
     # 브라우저 실행                               # headless=True : 창 없이 백그라운드 실행
     browser = p.chromium.launch(headless=False)  # headless=False : 창이 화면에 표시
-                                                
-    # 새 페이지 생성
-    page = browser.new_page()
 
-    # 사이트 이동
-    page.goto("https://google.com")             
-    print(page.title())  # 페이지 제목 출력    
+    # 독립적인 세션 환경을 만듦
+    context = browser.new_context()
 
-    # 화면 캡처
-    # 현재 폴더에 screenshot.png 파일 생성
-    page.screenshot(path="screenshot.png") 
+    # 첫 번째 페이지 생성
+    page1 = context.new_page()         # 새 페이지 생성
+    page1.goto("https://google.com")   # 사이트 이동
+    
+    # 두 번째 페이지 생성
+    page2 = context.new_page()
+    page2.goto("https://www.naver.com")
 
-    page.pause()
+    input("아무 키나 누르면 끝납니다.")
 
+    context.close()     # 컨텍스트 종료
     browser.close()     # 브라우저 종료
