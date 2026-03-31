@@ -64,7 +64,7 @@ def browser(request):
         yield browser
         browser.close()
 
-# 각 테스트(케이스)마다 깨끗한 세션/탭 사용
+# 각 테스트마다 독립된 페이지 사용
 @pytest.fixture
 def page(browser):
     context = browser.new_context()
